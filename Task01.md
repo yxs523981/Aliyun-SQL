@@ -155,6 +155,104 @@ SQL本质：接近自然语言的数据库操作指令，重点在于精准描�
 
 
 
+附：练习题sql(该sql语句是使用postgresql数据库而不是mysql)
+
+--3.1
+
+create table public.addressbook (
+
+	regist_no integer not null,
+ 
+	"name" varchar(128) not null,
+ 
+     address varchar(128) not null,
+     
+     tel_no varchar(10) null,
+     
+     mail_address varchar(20) null,
+     
+	constraint addressbook_pkey primary key (regist_no)
+ 
+);
+
+comment on
+table public.addressbook is '地址薄';
+
+comment on
+column public.addressbook.regist_no is '注册编号';
+
+comment on
+column public.addressbook."name" is '姓名';
+
+comment on
+column public.addressbook.address is '住址';
+
+comment on
+column public.addressbook.tel_no is '电话号码';
+
+comment on
+column public.addressbook.mail_address is '邮箱地址';
+
+--3.2
+
+alter table addressbook add column postal_code varchar(8) not null; 
+
+comment on column  addressbook.postal_code is '邮政编码';
+
+--3.3
+drop table addressbook;
+
+-- 3.4 
+--drop 后的表无法恢复，所以在实际应用中除非确定该表已经完全不可用或是测试表，需要提前备份，若是有数据存在也应该提前备份
+
+以下是我提前备份的语句(用dbeaver工具生成)
+
+-- public.addressbook definition
+
+-- Drop table
+
+-- DROP TABLE public.addressbook;
+
+CREATE TABLE public.addressbook (
+
+	regist_no int4 NOT NULL, -- 注册编号
+ 
+	"name" varchar(128) NOT NULL, -- 姓名
+ 
+	address varchar(128) NOT NULL, -- 住址
+ 
+	tel_no varchar(10) NULL, -- 电话号码
+ 
+	mail_address varchar(20) NULL, -- 邮箱地址
+ 
+	postal_code varchar(8) NOT NULL -- 邮政编码
+ 
+);
+-- 表注释
+
+COMMENT ON TABLE public.addressbook IS '地址薄';
+
+
+-- 添加字段注释
+
+COMMENT ON COLUMN public.addressbook.regist_no IS '注册编号';
+
+COMMENT ON COLUMN public.addressbook."name" IS '姓名';
+
+COMMENT ON COLUMN public.addressbook.address IS '住址';
+
+COMMENT ON COLUMN public.addressbook.tel_no IS '电话号码';
+
+COMMENT ON COLUMN public.addressbook.mail_address IS '邮箱地址';
+
+COMMENT ON COLUMN public.addressbook.postal_code IS '邮政编码';
+
+
+
+
+
+
+
 
 
 
