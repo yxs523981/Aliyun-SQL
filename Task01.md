@@ -225,7 +225,9 @@ CREATE TABLE public.addressbook (
  
 	mail_address varchar(20) NULL, -- 邮箱地址
  
-	postal_code varchar(8) NOT NULL -- 邮政编码
+	postal_code varchar(8) NOT NULL, -- 邮政编码
+
+        CONSTRAINT addressbook_pkey PRIMARY KEY (regist_no)
  
 );
 -- 表注释
