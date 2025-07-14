@@ -1,4 +1,5 @@
 本学习笔记为阿里云天池龙珠计划sql训练营的学习内容，学习链接为：https://tianchi.aliyun.com/specials/promotion/aicampsql
+
 一、学习知识点概要
 数据库与DBMS基本概念
 DBMS的5种类型及RDBMS代表产品
