@@ -1,3 +1,22 @@
+本学习笔记为阿里云天池龙珠计划sql训练营的学习内容，学习链接为：https://tianchi.aliyun.com/specials/promotion/aicampsql
+
+一、学习知识点概要
+
+SELECT语句基础
+
+算术运算符和比较运算符
+
+
+逻辑运算符
+
+对表进行聚合查询
+
+对表进行分组
+
+为聚合结果指定条件
+
+对查询结果进行排序
+
 # SQL 基础查询与排序
 
 [TOC]
